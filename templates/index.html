@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Actas</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestión de Actas</h1>
+        </header>
+        <main>
+            <section class="diligencia-section">
+                <div class="diligencia-header">
+                    <input type="text" id="nombre_diligencia" placeholder="Nombre de la Diligencia">
+                    <button id="configuracion">
+                        <img src="/static/img/settings-icon.png" alt="Configuración">
+                    </button>
+                </div>
+                <div class="actas-creadas">
+                    <h2>Actas Creadas</h2>
+                    <ul id="lista_actas">
+                        <!-- Lista de actas creadas -->
+                    </ul>
+                </div>
+            </section>
+            <section class="acciones-section">
+                <button id="add_acta">Añadir Acta</button>
+                <button id="exportar">Generar Actas</button>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal para añadir acta -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close_modal" class="close">&times;</span>
+            <h2>Añadir Acta</h2>
+            <div id="plantillas">
+                <label for="select_plantilla">Seleccionar Plantilla:</label>
+                <select id="select_plantilla">
+                    <!-- Plantillas cargadas dinámicamente -->
+                </select>
+            </div>
+            <div id="formulario_datos">
+                <h3>Datos de la Plantilla</h3>
+                <form id="datos_acta">
+                    <!-- Campos generados dinámicamente -->
+                </form>
+            </div>
+            <button id="guardar_acta">Guardar</button>
+        </div>
+    </div>
+
+    <script src="/static/js/scripts.js"></script>
+</body>
+</html>
